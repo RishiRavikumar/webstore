@@ -1,0 +1,43 @@
+INSERT INTO public.catalog(
+	name, description, catalog_id)
+	VALUES ('MenFashion', 'Apparel, Footwear, Watches, EyeWear', '1');
+
+INSERT INTO public.catalog(
+	name, description, catalog_id)
+	VALUES ('Electronics', 'Phones, Laptops, Audio Store, Accessories', '2');
+
+INSERT INTO public.category(
+	category_id, name, description, sub_id)
+	VALUES ('1', 'Footwear', 'Shoes, Boots', '2');
+
+INSERT INTO public.category(
+	category_id, name, description, sub_id)
+	VALUES ('2', 'Casual Shoes', 'Sneakers, etc', NULL);
+
+INSERT INTO public.category(
+	category_id, name, description, sub_id)
+	VALUES ('3', 'Clothing', 'T-Shirts, Polo, Jeans', '4');
+
+INSERT INTO public.category(
+	category_id, name, description, sub_id)
+	VALUES ('4', 'Polo', 'Brand1, Brand2', NULL);
+
+INSERT INTO public.product(
+	product_id, name, description, cost, units)
+	VALUES (101, 'U.S. Polo Assn. Loafers', 'Appear effortlessly smart by wearing this pair of brown slip-on shoes from U.S. Polo Assn.', 1959, 100);
+
+INSERT INTO public.product(
+	product_id, name, description, cost, units)
+	VALUES (102, 'Respiro Shoes', 'Stylish and comfortable, this pair of black slip-on shoes from Respiro is sure to add value to your footwear collection.', 799, 100);
+
+INSERT INTO public.category_product(
+    category_id, product_id)
+    VALUES (1, 101);
+INSERT INTO public.category_product(
+    category_id, product_id)
+    VALUES (1, 102);
+
+INSERT INTO public.item(
+	item_id, item_name, description, price, available, product_id)
+	VALUES (1, 'Fresco Brown Loafers', 'Brown Loafers', 1799, true, 101);
+
